@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  isyzan-vpn:
+    build: .
+    container_name: isyzan-vpn
+    restart: unless-stopped
+    network_mode: host
+    volumes:
+      - ./configs:/app/configs
+      - /var/log/isyzan.log:/var/log/isyzan.log
+    environment:
+      - TZ=Europe/Moscow
+    cap_add:
+      - NET_ADMIN
