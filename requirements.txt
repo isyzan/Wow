@@ -1,0 +1,5 @@
+aiohttp==3.9.1
+aiofiles==23.2.1
+asyncio==3.4.3
+cryptography==41.0.7
+PySocks==1.7.1
